@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/sh
+if [ "debian" = "pacman" ] || [ "$1" != "upgrade" ]; then
+if [ -x "/data/data/com.termux/files/usr/bin/update-alternatives" ]; then
+update-alternatives --remove lua /data/data/com.termux/files/usr/bin/lua
+update-alternatives --remove luac /data/data/com.termux/files/usr/bin/luac
+fi
+fi

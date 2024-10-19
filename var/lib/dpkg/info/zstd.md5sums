@@ -1,0 +1,11 @@
+9e352fdaca5ddac94af05b3dbec5d30a  data/data/com.termux/files/usr/share/man/man1/zstdgrep.1.gz
+95e9aa6b95952c6b98ef1a85399a0b8d  data/data/com.termux/files/usr/share/man/man1/zstdless.1.gz
+ee23898b7a5f9b6f9a796d0dfff3e7fb  data/data/com.termux/files/usr/share/man/man1/zstd.1.gz
+5a89931a9edc755299471fe81a53ce1c  data/data/com.termux/files/usr/bin/zstd
+3e4b9f1567d9c38929a9aa8e183e5e7a  data/data/com.termux/files/usr/bin/zstdgrep
+813a0eb9155b0ef6516d815c53cef35b  data/data/com.termux/files/usr/bin/zstdless
+45aedf4ff314c85dd1952fdecb75a1d9  data/data/com.termux/files/usr/include/zdict.h
+f39ee478d54102b6cc18298188c223d7  data/data/com.termux/files/usr/include/zstd_errors.h
+a6877b0889398f9d6e1ec28a6e0a1a28  data/data/com.termux/files/usr/include/zstd.h
+029275a1043cc85d15cccef3a63771c1  data/data/com.termux/files/usr/lib/libzstd.so.1.5.6
+e46987171bd78abd789989cd34e70eb1  data/data/com.termux/files/usr/lib/pkgconfig/libzstd.pc

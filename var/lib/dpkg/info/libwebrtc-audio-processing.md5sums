@@ -1,0 +1,16 @@
+da08a38a32a340c5d91e13ee86a118f2  data/data/com.termux/files/usr/share/doc/libwebrtc-audio-processing/LICENSE
+10becb17ba4127d3a9a773c6fe6f6a6c  data/data/com.termux/files/usr/lib/pkgconfig/webrtc-audio-processing.pc
+c2c99c38cf1b7728b02886339ae07357  data/data/com.termux/files/usr/lib/libwebrtc_audio_processing.so
+a6ad1671f5296c268de327fc20366d5f  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/typedefs.h
+c0a8532897dae3b6339ad901f44d1bb1  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/checks.h
+63d6f5a6346707e6d6f9ec21ca9c22b9  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/basictypes.h
+c0013259f55073db1c97642f65485699  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/maybe.h
+b38e187bff6beb089eda0b5f2a3f8a3d  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/platform_file.h
+ba105b97f153a48eba2419a32f38a223  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/arraysize.h
+c45a6f0f14d68675d2fe7d348c4eebb4  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/base/constructormagic.h
+542ab618d7517832e7cda82caf7b8967  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/common.h
+e1121dc0902c94346051080c27fcd0fc  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/common_types.h
+08ce443fb82838c42c7fc33d1b5b8de5  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/system_wrappers/include/trace.h
+aef8aa12563b2880376bdc53c6827313  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/modules/audio_processing/beamformer/array_util.h
+dd7a857f7080fc616c79f972cbc4791f  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/modules/audio_processing/include/audio_processing.h
+5576b282d50baa5ed96ef7d9687f5eb8  data/data/com.termux/files/usr/include/webrtc_audio_processing/webrtc/modules/interface/module_common_types.h

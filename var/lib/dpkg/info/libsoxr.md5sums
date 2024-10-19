@@ -1,0 +1,17 @@
+26b2fd1d6373f9fcbcb609619ff6d812  data/data/com.termux/files/usr/include/soxr-lsr.h
+da00cfd06c0d8609e3a0d5654aafb849  data/data/com.termux/files/usr/include/soxr.h
+a9de07f90d565e8fb0fb7d39f6163e05  data/data/com.termux/files/usr/share/doc/libsoxr/examples/README
+663c2d855981d4f52b66e84b5cbd9e1c  data/data/com.termux/files/usr/share/doc/libsoxr/examples/1-single-block.c
+077455a8ccdfb6dc8b9891f4d2eb36d3  data/data/com.termux/files/usr/share/doc/libsoxr/examples/1a-lsr.c
+b3b5d70923a490ff0fc6e4af2026ba37  data/data/com.termux/files/usr/share/doc/libsoxr/examples/3-options-input-fn.c
+4e4100184670a8b0f0deeb17f44ffc5b  data/data/com.termux/files/usr/share/doc/libsoxr/examples/2-stream.C
+5ebe3645241f73aae463431a5ddb19c0  data/data/com.termux/files/usr/share/doc/libsoxr/examples/5-variable-rate.c
+58be6cea5759402db15fae6e44a841a6  data/data/com.termux/files/usr/share/doc/libsoxr/examples/4-split-channels.c
+9f11ad400cb9058a3da80e45becf77de  data/data/com.termux/files/usr/share/doc/libsoxr/examples/examples-common.h
+ce96af55ed19f27e0c4020e4c2ba2254  data/data/com.termux/files/usr/share/doc/libsoxr/NEWS
+34377f4c27846c450650719f1510c202  data/data/com.termux/files/usr/share/doc/libsoxr/README
+1f6605fc6dfe53a780959dfef7061f77  data/data/com.termux/files/usr/share/doc/libsoxr/LICENCE
+0db9a4c777ef4e14be09985ef0c76eb7  data/data/com.termux/files/usr/lib/libsoxr.so
+3a704a9644ff60a9056913f6f0951a6b  data/data/com.termux/files/usr/lib/libsoxr-lsr.so
+608f445e8f430173ba0235609d49c5ea  data/data/com.termux/files/usr/lib/pkgconfig/soxr.pc
+d229692103c8812dbbfe33780b4fcb8a  data/data/com.termux/files/usr/lib/pkgconfig/soxr-lsr.pc

@@ -1,0 +1,6 @@
+764abdf30b2eadd37ce47dcbce0ea1ec  data/data/com.termux/files/usr/share/doc/libnghttp2/LICENSE
+b12b0a19de5e732cc8103e4fee6c18f6  data/data/com.termux/files/usr/share/doc/nghttp2/README.rst
+8f841cfa4920c2947a584cfbbba6927a  data/data/com.termux/files/usr/include/nghttp2/nghttp2ver.h
+d79f2644dc53bbac6ed070544fe98d99  data/data/com.termux/files/usr/include/nghttp2/nghttp2.h
+bed8d9cde5e2415e4203c644ca9dad93  data/data/com.termux/files/usr/lib/libnghttp2.so
+86cd599f8af504bec03ef242ffb4bc1f  data/data/com.termux/files/usr/lib/pkgconfig/libnghttp2.pc

@@ -1,0 +1,14 @@
+0d82459e35a79df0e08a4fb90648ff08  data/data/com.termux/files/usr/bin/unbound
+2c53825159dccf119424904e832eb39a  data/data/com.termux/files/usr/bin/unbound-checkconf
+44fa7b2cdbca4483c3226af82cb7d33f  data/data/com.termux/files/usr/bin/unbound-anchor
+4f53ceb823b7dd8a026b61d2ef39311b  data/data/com.termux/files/usr/bin/unbound-host
+27af60c6faa4c1d05b57d9f9cf017e8e  data/data/com.termux/files/usr/bin/unbound-control-setup
+7c31bb5adebffae11860d703da05235b  data/data/com.termux/files/usr/bin/unbound-control
+19d11d860d18cd3b5915c1ab3734c72f  data/data/com.termux/files/usr/etc/unbound/unbound.conf
+350a7eafcf24d5929458e659e4e66794  data/data/com.termux/files/usr/share/man/man1/unbound-host.1.gz
+3bf129a38d485700e38410b9211ee327  data/data/com.termux/files/usr/share/man/man5/unbound.conf.5.gz
+635467ef9aa2598b7c6e124a475d67fb  data/data/com.termux/files/usr/share/man/man8/unbound.8.gz
+32aba73a2a5f2ed6bd3dfda245eabad3  data/data/com.termux/files/usr/share/man/man8/unbound-control.8.gz
+b6b9e6b4e0637b211a5395b82bf3982d  data/data/com.termux/files/usr/share/man/man8/unbound-anchor.8.gz
+8a737feca9ed9160e2bd97ae11ee263e  data/data/com.termux/files/usr/share/man/man8/unbound-checkconf.8.gz
+682f95c2be56b1778c3b5b1a93e5cae4  data/data/com.termux/files/usr/share/man/man8/unbound-control-setup.8.gz

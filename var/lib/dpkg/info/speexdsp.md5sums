@@ -1,0 +1,9 @@
+6dc61a0a2eede9b3ab6fddbb25c48760  data/data/com.termux/files/usr/include/speex/speex_resampler.h
+2641ee1dcb8629440bc62371ff7b34d8  data/data/com.termux/files/usr/include/speex/speexdsp_config_types.h
+2b8a9f7d47d1dec24a2b05e92398cc29  data/data/com.termux/files/usr/include/speex/speexdsp_types.h
+5c89b787b4612254a4582323aa399a68  data/data/com.termux/files/usr/include/speex/speex_jitter.h
+7eb10f8589e9534e2960354935ef7413  data/data/com.termux/files/usr/include/speex/speex_echo.h
+2849574c2a9dac09f6cd0d578e784867  data/data/com.termux/files/usr/include/speex/speex_preprocess.h
+eff3f76350f52a99a3df5eec6b79c02a  data/data/com.termux/files/usr/share/doc/speexdsp/LICENSE
+4ab9e2ceccba4f77d913b1b339fcfe11  data/data/com.termux/files/usr/lib/pkgconfig/speexdsp.pc
+bb1dea2a3e151ba56928e79aa55b64d5  data/data/com.termux/files/usr/lib/libspeexdsp.so

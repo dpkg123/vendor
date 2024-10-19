@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<HwTheme>
+    <title>DroidSansFallback</title>
+    <title-cn>安卓原生</title-cn>
+    <author>Huawei</author>
+    <designer>Huawei</designer>
+    <screen>FHD</screen>
+    <version>3.0.1</version>
+    <font>DroidSansFallback</font>
+    <font-cn>安卓原生</font-cn>
+    <transition>None</transition>
+	<type>font</type>
+</HwTheme>

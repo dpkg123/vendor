@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/sh
+if [ ! -e /data/data/com.termux/files/usr/var/lib/dbus/machine-id ]; then
+mkdir -p /data/data/com.termux/files/usr/var/lib/dbus
+dbus-uuidgen > /data/data/com.termux/files/usr/var/lib/dbus/machine-id
+fi
+exit 0

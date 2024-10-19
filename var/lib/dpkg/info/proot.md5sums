@@ -1,0 +1,5 @@
+adfccdedea8a31e15acb4d4484d163cd  data/data/com.termux/files/usr/bin/termux-chroot
+e7de580419bacc8925d28ce9966b6122  data/data/com.termux/files/usr/bin/proot
+902a2e3a4bb4f03c1b83dc99a595125e  data/data/com.termux/files/usr/share/man/man1/proot.1.gz
+8b10ab1aab8e75c6698a0b6a59184096  data/data/com.termux/files/usr/libexec/proot/loader
+3d76f2b3aa45e5b8de9d1303939e72ad  data/data/com.termux/files/usr/libexec/proot/loader32

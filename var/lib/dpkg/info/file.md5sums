@@ -1,0 +1,9 @@
+8bafafc441e2e0b9660848c98760b5f3  data/data/com.termux/files/usr/share/doc/file/LICENSE
+1f1cce52172b4b8914c394def6321f87  data/data/com.termux/files/usr/share/man/man1/file.1.gz
+9ad40d681e037f8f6460d06d47886541  data/data/com.termux/files/usr/share/man/man3/libmagic.3.gz
+f8ecc40bafbbd9326b6d452de2e5d250  data/data/com.termux/files/usr/share/man/man4/magic.4.gz
+3b01c3f5cb8abd2f284e225200cf922c  data/data/com.termux/files/usr/share/misc/magic.mgc
+bd00fd74637b6532f4a45c8f612bdefd  data/data/com.termux/files/usr/bin/file
+3e7d21936a6fef94001f63ddebb8a897  data/data/com.termux/files/usr/include/magic.h
+1a71f595417b8e2748ae8d37d3c6d5c2  data/data/com.termux/files/usr/lib/pkgconfig/libmagic.pc
+cee8d6f81fe08a07c228b4066e15d725  data/data/com.termux/files/usr/lib/libmagic.so

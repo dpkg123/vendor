@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/env bash
+[[ ! $(command -v termux-wake-unlock) ]] || termux-wake-unlock 2>/dev/null
+pulseaudio --kill 2>/dev/null
+sh -c "$(ps -e | grep -Ev "sshd|pkill|systemd" | awk '{print $4}' | sed '/(/d' | sed 's/^/pkill &/g')"

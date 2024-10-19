@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/env bash
+vnc_warning() {
+printf "%s \033[33m%s\033[m %s \033[32m%s\033[m %s\n" "Starting" "X" ",if you can not start it, then type" "tmoe t" ",and reinstall desktop."
+/data/data/com.termux/files/usr/bin/tmoe pr xs
+}
+if [ -e "/data/data/com.termux/files/home/.config/tmoe-linux/chroot_container" ]; then
+/data/data/com.termux/files/usr/bin/tmoe ch xs
+elif [ -d "/data/data/com.termux/files/home/.local/share/tmoe-linux/containers/proot/debian-trixie_arm64/root/.vnc" ];then
+/data/data/com.termux/files/usr/bin/tmoe pr xs
+else
+vnc_warning
+fi

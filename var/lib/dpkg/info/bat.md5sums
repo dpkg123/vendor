@@ -1,0 +1,5 @@
+dbef8b6d2780507ada6cf46bda72cf2b  data/data/com.termux/files/usr/share/bash-completion/completions/bat
+b1104ec5aa66c3e734694ec9b5172d27  data/data/com.termux/files/usr/share/zsh/site-functions/_bat
+0014f48ff4fa1d230dfda5839f1bfc57  data/data/com.termux/files/usr/share/man/man1/bat.1.gz
+e4f330523aafc3e0263a2c2c7b9fa2e1  data/data/com.termux/files/usr/share/fish/vendor_completions.d/bat.fish
+6eefebdea172a312ce72680cc064bb8a  data/data/com.termux/files/usr/bin/bat

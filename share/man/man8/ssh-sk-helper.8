@@ -1,0 +1,55 @@
+.TH SSH-SK-HELPER 8 "April 29 2022 " ""
+.SH NAME
+\fBssh-sk-helper\fP
+\- OpenSSH helper for FIDO authenticator support
+.SH SYNOPSIS
+.br
+\fBssh-sk-helper\fP
+[\fB\-v\fP]
+.SH DESCRIPTION
+\fBssh-sk-helper\fP
+is used by
+\fBssh\fP(1),
+\fBssh-agent\fP(1),
+and
+\fBssh-keygen\fP(1)
+to access keys provided by a FIDO authenticator.
+
+\fBssh-sk-helper\fP
+is not intended to be invoked directly by the user.
+
+A single option is supported:
+.TP
+\fB\-v\fP
+Verbose mode.
+Causes
+\fBssh-sk-helper\fP
+to print debugging messages about its progress.
+This is helpful in debugging problems.
+Multiple
+\fB\-v\fP
+options increase the verbosity.
+The maximum is 3.
+
+Note that
+\fBssh\fP(1),
+\fBssh-agent\fP(1),
+and
+\fBssh-keygen\fP(1)
+will automatically pass the
+\fB\-v\fP
+flag to
+\fBssh-sk-helper\fP
+when they have themselves been placed in debug mode.
+.PP
+.SH SEE ALSO
+\fBssh\fP(1),
+\fBssh-agent\fP(1),
+\fBssh-keygen\fP(1)
+.SH HISTORY
+\fBssh-sk-helper\fP
+first appeared in
+OpenBSD 6.7 .
+.SH AUTHORS
+
+Damien Miller <Mt djm@openbsd.org>

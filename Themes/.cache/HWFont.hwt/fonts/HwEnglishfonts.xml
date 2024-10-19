@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    All fonts without names are added to the default list. Fonts are chosen
+    based on a match: full BCP-47 language tag including script, then just
+    language, and finally order (the first font containing the glyph).
+
+    Order of appearance is also the tiebreaker for weight matching. This is
+    the reason why the 900 weights of Roboto precede the 700 weights - we
+    prefer the former when an 800 weight is requested. Since bold spans
+    effectively add 300 to the weight, this ensures that 900 is the bold
+    paired with the 500 weight, ensuring adequate contrast.
+-->
+
+<familyset version="22">
+    
+<!-- first font is default -->
+    
+<family name="Huawei-serif">
+        
+<font weight="100" style="normal">hw/HuaweiFont-Thin.ttf</font>
+        
+<font weight="100" style="italic">Roboto-ThinItalic.ttf</font>
+        
+<font weight="300" style="normal">hw/HuaweiFont-Light.ttf</font>
+        
+<font weight="300" style="italic">Roboto-LightItalic.ttf</font>
+        
+<font weight="400" style="normal">hw/HuaweiFont-Regular.ttf</font>
+        
+<font weight="400" style="italic">Roboto-Italic.ttf</font>
+        
+<font weight="500" style="normal">hw/HuaweiFont-Medium.ttf</font>
+        
+<font weight="500" style="italic">Roboto-MediumItalic.ttf</font>
+        
+<font weight="900" style="normal">Roboto-Black.ttf</font>
+        
+<font weight="900" style="italic">Roboto-BlackItalic.ttf</font>
+        
+<font weight="700" style="normal">hw/HuaweiFont-Bold.ttf</font>
+        
+<font weight="700" style="italic">Roboto-BoldItalic.ttf</font>
+    
+</family>
+
+    
+<!-- AR0004893V liuyang/00281952 end -->
+
+ 
+
+</familyset>

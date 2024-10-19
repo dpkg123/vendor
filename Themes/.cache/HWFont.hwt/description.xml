@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<HwTheme>
+    <title>Huawei Font</title>
+    <title-cn>Huawei Font</title-cn>
+    <author>Huawei</author>
+    <designer>Huawei</designer>
+    <screen>FHD</screen>
+    <version>3.0.1</version>
+    <font>Huawei Font</font>
+    <font-cn>Huawei Font</font-cn>
+    <transition>None</transition>
+	<type>font</type>
+</HwTheme>

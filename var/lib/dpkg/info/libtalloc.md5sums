@@ -1,0 +1,4 @@
+f3b8769b4ad35d999ceabfa7176cdf2f  data/data/com.termux/files/usr/include/talloc.h
+b0c5211af4e936b100a63be5018755e5  data/data/com.termux/files/usr/share/man/man3/talloc.3.gz
+b8b6b9cb5b7cbc243ee0fa6ff8abdfa8  data/data/com.termux/files/usr/lib/pkgconfig/talloc.pc
+d5a693b5f93ac4ea9b76ac8388a710a0  data/data/com.termux/files/usr/lib/libtalloc.so.2.4.1

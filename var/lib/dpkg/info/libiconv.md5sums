@@ -1,0 +1,17 @@
+86de194d9e938f1e68e85b14ce7c594b  data/data/com.termux/files/usr/include/localcharset.h
+2cdfd393d2c8e7211b241e33119fdbcb  data/data/com.termux/files/usr/include/libcharset.h
+b2fc3eb69b19b470f76aa362172c4039  data/data/com.termux/files/usr/include/iconv.h
+39f845fe6bf59c8e4e32f9bf121de303  data/data/com.termux/files/usr/lib/libiconv.so
+236f571cc3fa619caa272c48e08d639a  data/data/com.termux/files/usr/lib/libcharset.so
+c56d3d4d2ec43af140191efaf5a7ce12  data/data/com.termux/files/usr/share/man/man3/iconv.3.gz
+513db6fdc947abb8df80578d169e8903  data/data/com.termux/files/usr/share/man/man3/iconvctl.3.gz
+21e3cf4f6223f06f1e9158648430516d  data/data/com.termux/files/usr/share/man/man3/iconv_open_into.3.gz
+0cb738031c77082dbb0423042b5c47f7  data/data/com.termux/files/usr/share/man/man3/iconv_open.3.gz
+1b88fabc99af9f96af80cdfcef80aa0f  data/data/com.termux/files/usr/share/man/man3/iconv_close.3.gz
+8f649b53905551bf7c5251533a140f31  data/data/com.termux/files/usr/share/man/man1/iconv.1.gz
+078747f1c703f6912cfe597f6741c0ce  data/data/com.termux/files/usr/share/doc/iconv_open.3.html
+b8958601fbfa5e59794c0581131f6955  data/data/com.termux/files/usr/share/doc/iconvctl.3.html
+092007e566449e603eab90b92b93434a  data/data/com.termux/files/usr/share/doc/iconv_open_into.3.html
+89218f9f335f8e14d0f068f8c2426bec  data/data/com.termux/files/usr/share/doc/iconv.3.html
+64cca2fb9a6d690339eb36c1da34feee  data/data/com.termux/files/usr/share/doc/iconv.1.html
+fced01e21254e2089ef4b5d7df304ac4  data/data/com.termux/files/usr/share/doc/iconv_close.3.html

@@ -1,0 +1,10 @@
+2fcd0132bf1ebafcc5275a3c365eba0d  data/data/com.termux/files/usr/include/libpng16/png.h
+8ecddbba4249b69243f9b40541696a5e  data/data/com.termux/files/usr/include/libpng16/pngconf.h
+f2483c4ca71fda51992dc6e691b300e5  data/data/com.termux/files/usr/include/libpng16/pnglibconf.h
+403a573a48987be1311f9b14392a1813  data/data/com.termux/files/usr/share/man/man5/png.5.gz
+ca7e7a247e452b2dbde270859f2985a1  data/data/com.termux/files/usr/share/man/man3/libpng.3.gz
+a65e23cdc6f5c32dac6033f81523f8fc  data/data/com.termux/files/usr/share/man/man3/libpngpf.3.gz
+0fdbfbe10fc294a6fca24dc76134222a  data/data/com.termux/files/usr/share/doc/libpng/LICENSE
+f3710ce29438369a9aedf7c6e0af636b  data/data/com.termux/files/usr/lib/libpng16.so
+2d1e6651f06bea4301cf9d7880cdbed5  data/data/com.termux/files/usr/lib/pkgconfig/libpng16.pc
+6da6e665202736f01a33bba37b5b8e16  data/data/com.termux/files/usr/bin/libpng16-config

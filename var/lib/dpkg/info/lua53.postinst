@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/sh
+if [ "debian" = "pacman" ] || [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+if [ -x "/data/data/com.termux/files/usr/bin/update-alternatives" ]; then
+update-alternatives --install 				/data/data/com.termux/files/usr/bin/lua lua /data/data/com.termux/files/usr/bin/lua5.3 130
+update-alternatives --install 				/data/data/com.termux/files/usr/bin/luac luac /data/data/com.termux/files/usr/bin/luac5.3 130
+fi
+fi

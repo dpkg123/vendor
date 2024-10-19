@@ -1,0 +1,7 @@
+1e4228d0c5a9093b01aeaaeae6641533  data/data/com.termux/files/usr/share/doc/libedit/LICENSE
+4a87a5352bc8a47469bb8aaf4f2c6f23  data/data/com.termux/files/usr/share/man/man3/editline.3.gz
+63f836d16253793eac20547a7aa88822  data/data/com.termux/files/usr/share/man/man5/editrc.5.gz
+e981e053ec680c7c33d2e17c3a461e4c  data/data/com.termux/files/usr/include/editline/readline.h
+d8e66b4f31075d45b192d25c5449f116  data/data/com.termux/files/usr/include/histedit.h
+c0fb77409f90f992234e3268b5dfe68e  data/data/com.termux/files/usr/lib/libedit.so
+4fa8e6ef508ccf91af803e0e27adc018  data/data/com.termux/files/usr/lib/pkgconfig/libedit.pc

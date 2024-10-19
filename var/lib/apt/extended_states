@@ -1,0 +1,160 @@
+Package: slang
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libnewt
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: oniguruma
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpng
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpopt
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: resolv-conf
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libmd
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libunbound
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libsmartcols
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libnghttp3
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libflac
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libvorbis
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: c-ares
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libltdl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libgit2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxml2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: speexdsp
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libsoxr
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libtalloc
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxdmcp
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libsndfile
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libopus
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libandroid-execinfo
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libwebrtc-audio-processing
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libogg
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: dbus
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libx11
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxau
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxcb
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: termux-auth
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: krb5
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: ldns
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libdb
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: openssh-sftp-server
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libresolv-wrapper
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libedit
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: openssh
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: vulkan-loader
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: vulkan-loader-generic
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libidn
+Architecture: aarch64
+Auto-Installed: 1
+

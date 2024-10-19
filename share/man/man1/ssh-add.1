@@ -1,0 +1,341 @@
+.TH SSH-ADD 1 "December 19 2023 " ""
+.SH NAME
+\fBssh-add\fP
+\- adds private key identities to the OpenSSH authentication agent
+.SH SYNOPSIS
+.br
+\fBssh-add\fP
+[\fB\-CcDdKkLlqvXx\fP]
+[\fB\-E\fP \fIfingerprint_hash\fP]
+[\fB\-H\fP \fIhostkey_file\fP]
+[\fB\-h\fP \fIdestination_constraint\fP]
+[\fB\-S\fP \fIprovider\fP]
+[\fB\-t\fP \fIlife\fP]
+[\fIfile ...\fP]
+.br
+\fBssh-add\fP
+\fB\-s\fP \fIpkcs11\fP
+[\fB\-Cv\fP]
+[\fIcertificate\fP...]
+.br
+\fBssh-add\fP
+\fB\-e\fP \fIpkcs11\fP
+.br
+\fBssh-add\fP
+\fB\-T\fP
+\fIpubkey\fP...
+.SH DESCRIPTION
+\fBssh-add\fP
+adds private key identities to the authentication agent,
+\fBssh-agent\fP(1).
+When run without arguments, it adds the files
+\fI~/.ssh/id_rsa\fP,
+\fI~/.ssh/id_ecdsa\fP,
+\fI~/.ssh/id_ecdsa_sk\fP,
+\fI~/.ssh/id_ed25519\fP,
+\fI~/.ssh/id_ed25519_sk\fP,
+and
+\fI~/.ssh/id_dsa\fP.
+After loading a private key,
+\fBssh-add\fP
+will try to load corresponding certificate information from the
+filename obtained by appending
+\fI-cert.pub\fP
+to the name of the private key file.
+Alternative file names can be given on the command line.
+
+If any file requires a passphrase,
+\fBssh-add\fP
+asks for the passphrase from the user.
+The passphrase is read from the user's tty.
+\fBssh-add\fP
+retries the last passphrase if multiple identity files are given.
+
+The authentication agent must be running and the
+.IR SSH_AUTH_SOCK
+environment variable must contain the name of its socket for
+\fBssh-add\fP
+to work.
+
+The options are as follows:
+.TP
+\fB\-C\fP
+When loading keys into or deleting keys from the agent, process
+certificates only and skip plain keys.
+.TP
+\fB\-c\fP
+Indicates that added identities should be subject to confirmation before
+being used for authentication.
+Confirmation is performed by
+\fBssh-askpass\fP(1).
+Successful confirmation is signaled by a zero exit status from
+\fBssh-askpass\fP(1),
+rather than text entered into the requester.
+.TP
+\fB\-D\fP
+Deletes all identities from the agent.
+.TP
+\fB\-d\fP
+Instead of adding identities, removes identities from the agent.
+If
+\fBssh-add\fP
+has been run without arguments, the keys for the default identities and
+their corresponding certificates will be removed.
+Otherwise, the argument list will be interpreted as a list of paths to
+public key files to specify keys and certificates to be removed from the agent.
+If no public key is found at a given path,
+\fBssh-add\fP
+will append
+\fI\&.pub\fP
+and retry.
+If the argument list consists of
+``-''
+then
+\fBssh-add\fP
+will read public keys to be removed from standard input.
+.TP
+\fB\-E\fP \fIfingerprint_hash\fP
+Specifies the hash algorithm used when displaying key fingerprints.
+Valid options are:
+``md5''
+and
+``sha256''.
+The default is
+``sha256''.
+.TP
+\fB\-e\fP \fIpkcs11\fP
+Remove keys provided by the PKCS#11 shared library
+\fIpkcs11\fP.
+.TP
+\fB\-H\fP \fIhostkey_file\fP
+Specifies a known hosts file to look up hostkeys when using
+destination-constrained keys via the
+\fB\-h\fP
+flag.
+This option may be specified multiple times to allow multiple files to be
+searched.
+If no files are specified,
+\fBssh-add\fP
+will use the default
+\fBssh_config\fP(5)
+known hosts files:
+\fI~/.ssh/known_hosts\fP,
+\fI~/.ssh/known_hosts2\fP,
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_known_hosts\fP,
+and
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_known_hosts2\fP.
+.TP
+\fB\-h\fP \fIdestination_constraint\fP
+When adding keys, constrain them to be usable only through specific hosts or to
+specific destinations.
+
+Destination constraints of the form
+`[user@]dest-hostname'
+permit use of the key only from the origin host (the one running
+\fBssh-agent\fP(1))
+to the listed destination host, with optional user name.
+
+Constraints of the form
+`src-hostname>[user@]dst-hostname'
+allow a key available on a forwarded
+\fBssh-agent\fP(1)
+to be used through a particular host (as specified by
+`src-hostname' )
+to authenticate to a further host,
+specified by
+`dst-hostname'.
+
+Multiple destination constraints may be added when loading keys.
+When attempting authentication with a key that has destination constraints,
+the whole connection path, including
+\fBssh-agent\fP(1)
+forwarding, is tested against those constraints and each
+hop must be permitted for the attempt to succeed.
+For example, if key is forwarded to a remote host,
+`host-b',
+and is attempting authentication to another host,
+`host-c',
+then the operation will be successful only if
+`host-b'
+was permitted from the origin host and the subsequent
+`host-b>host-c'
+hop is also permitted by destination constraints.
+
+Hosts are identified by their host keys, and are looked up from known hosts
+files by
+\fB.\fP
+Wildcards patterns may be used for hostnames and certificate host
+keys are supported.
+By default, keys added by
+\fBssh-add\fP
+are not destination constrained.
+
+Destination constraints were added in OpenSSH release 8.9.
+Support in both the remote SSH client and server is required when using
+destination-constrained keys over a forwarded
+\fBssh-agent\fP(1)
+channel.
+
+It is also important to note that destination constraints can only be
+enforced by
+\fBssh-agent\fP(1)
+when a key is used, or when it is forwarded by a
+.B cooperating
+\fBssh\fP(1).
+Specifically, it does not prevent an attacker with access to a remote
+.IR SSH_AUTH_SOCK
+from forwarding it again and using it on a different host (but only to
+a permitted destination).
+.TP
+\fB\-K\fP
+Load resident keys from a FIDO authenticator.
+.TP
+\fB\-k\fP
+When loading keys into or deleting keys from the agent, process plain private
+keys only and skip certificates.
+.TP
+\fB\-L\fP
+Lists public key parameters of all identities currently represented
+by the agent.
+.TP
+\fB\-l\fP
+Lists fingerprints of all identities currently represented by the agent.
+.TP
+\fB\-q\fP
+Be quiet after a successful operation.
+.TP
+\fB\-S\fP \fIprovider\fP
+Specifies a path to a library that will be used when adding
+FIDO authenticator-hosted keys, overriding the default of using the
+internal USB HID support.
+.TP
+\fB\-s\fP \fIpkcs11\fP
+Add keys provided by the PKCS#11 shared library
+\fIpkcs11\fP.
+Certificate files may optionally be listed as command-line arguments.
+If these are present, then they will be loaded into the agent using any
+corresponding private keys loaded from the PKCS#11 token.
+.TP
+\fB\-T\fP \fIpubkey\fP...
+Tests whether the private keys that correspond to the specified
+\fIpubkey\fP
+files are usable by performing sign and verify operations on each.
+.TP
+\fB\-t\fP \fIlife\fP
+Set a maximum lifetime when adding identities to an agent.
+The lifetime may be specified in seconds or in a time format
+specified in
+\fBsshd_config\fP(5).
+.TP
+\fB\-v\fP
+Verbose mode.
+Causes
+\fBssh-add\fP
+to print debugging messages about its progress.
+This is helpful in debugging problems.
+Multiple
+\fB\-v\fP
+options increase the verbosity.
+The maximum is 3.
+.TP
+\fB\-X\fP
+Unlock the agent.
+.TP
+\fB\-x\fP
+Lock the agent with a password.
+.PP
+.SH ENVIRONMENT
+.TP
+.B "DISPLAY", "SSH_ASKPASS" and "SSH_ASKPASS_REQUIRE"
+If
+\fBssh-add\fP
+needs a passphrase, it will read the passphrase from the current
+terminal if it was run from a terminal.
+If
+\fBssh-add\fP
+does not have a terminal associated with it but
+.IR DISPLAY
+and
+.IR SSH_ASKPASS
+are set, it will execute the program specified by
+.IR SSH_ASKPASS
+(by default
+``ssh-askpass )''
+and open an X11 window to read the passphrase.
+This is particularly useful when calling
+\fBssh-add\fP
+from a
+\fI\&.xsession\fP
+or related script.
+
+.IR SSH_ASKPASS_REQUIRE
+allows further control over the use of an askpass program.
+If this variable is set to
+``never''
+then
+\fBssh-add\fP
+will never attempt to use one.
+If it is set to
+``prefer'',
+then
+\fBssh-add\fP
+will prefer to use the askpass program instead of the TTY when requesting
+passwords.
+Finally, if the variable is set to
+``force'',
+then the askpass program will be used for all passphrase input regardless
+of whether
+.IR DISPLAY
+is set.
+.TP
+.B SSH_AUTH_SOCK
+Identifies the path of a
+UNIX-domain
+socket used to communicate with the agent.
+.TP
+.B SSH_SK_PROVIDER
+Specifies a path to a library that will be used when loading any
+FIDO authenticator-hosted keys, overriding the default of using
+the built-in USB HID support.
+.PP
+.SH FILES
+.TP
+.B ~/.ssh/id_dsa
+.TP
+.B ~/.ssh/id_ecdsa
+.TP
+.B ~/.ssh/id_ecdsa_sk
+.TP
+.B ~/.ssh/id_ed25519
+.TP
+.B ~/.ssh/id_ed25519_sk
+.TP
+.B ~/.ssh/id_rsa
+Contains the DSA, ECDSA, authenticator-hosted ECDSA, Ed25519,
+authenticator-hosted Ed25519 or RSA authentication identity of the user.
+.PP
+
+Identity files should not be readable by anyone but the user.
+Note that
+\fBssh-add\fP
+ignores identity files if they are accessible by others.
+.SH EXIT STATUS
+Exit status is 0 on success, 1 if the specified command fails,
+and 2 if
+\fBssh-add\fP
+is unable to contact the authentication agent.
+.SH SEE ALSO
+\fBssh\fP(1),
+\fBssh-agent\fP(1),
+\fBssh-askpass\fP(1),
+\fBssh-keygen\fP(1),
+\fBsshd\fP(8)
+.SH AUTHORS
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by Tatu Ylonen.
+Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
+Theo de Raadt and Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+Markus Friedl contributed the support for SSH
+protocol versions 1.5 and 2.0.

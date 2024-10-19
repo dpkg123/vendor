@@ -1,0 +1,9 @@
+9eac928c301e03f2f2999ffed91673b7  data/data/com.termux/files/usr/share/aclocal/opus.m4
+e304cdf74c2a1b0a33a5084c128a23a3  data/data/com.termux/files/usr/share/doc/libopus/LICENSE
+48a422835fedae80e7136518be94f028  data/data/com.termux/files/usr/include/opus/opus.h
+39656f5c2fae0eca8367bde019d765a2  data/data/com.termux/files/usr/include/opus/opus_multistream.h
+74aa00a5fc0971fdbb4e76f871f3976e  data/data/com.termux/files/usr/include/opus/opus_types.h
+55a9fec61dd0a490063398644fc0424b  data/data/com.termux/files/usr/include/opus/opus_defines.h
+c525d963e8b904de6b31638e2f3e0cd9  data/data/com.termux/files/usr/include/opus/opus_projection.h
+911d9d6a85058e7466185eb3f3675c42  data/data/com.termux/files/usr/lib/libopus.so
+401830713a037378572326f068dee635  data/data/com.termux/files/usr/lib/pkgconfig/opus.pc

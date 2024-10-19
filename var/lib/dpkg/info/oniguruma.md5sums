@@ -1,0 +1,6 @@
+aa5bcd9fe9e5e92b068951d31ee5094f  data/data/com.termux/files/usr/include/oniggnu.h
+aa7b8b515c935eb925eb7dd69750bc39  data/data/com.termux/files/usr/include/oniguruma.h
+7dfdc54619ae389f888b14d2c4eff110  data/data/com.termux/files/usr/lib/libonig.so
+36815b7e7591272a9db7197e389651d6  data/data/com.termux/files/usr/lib/pkgconfig/oniguruma.pc
+e6365c225bb5cc4321d0913f0baffa04  data/data/com.termux/files/usr/share/doc/oniguruma/LICENSE
+22a760098a64b68180ab06b57d327785  data/data/com.termux/files/usr/bin/onig-config

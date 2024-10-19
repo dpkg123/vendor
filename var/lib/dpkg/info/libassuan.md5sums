@@ -1,0 +1,6 @@
+e9ac2d7fb7733e4c54f8793736839feb  data/data/com.termux/files/usr/include/assuan.h
+ac382c46e80af3fc19bb2e80b0d0a971  data/data/com.termux/files/usr/lib/libassuan.so
+6a2c0175c081a55ad164b9df9706b776  data/data/com.termux/files/usr/lib/pkgconfig/libassuan.pc
+a686c2d09357eab994ac6b12f132e43f  data/data/com.termux/files/usr/bin/libassuan-config
+46bbd855108a701a2795f74c9af63a33  data/data/com.termux/files/usr/share/info/assuan.info
+704184b7082857534bfc2e1b8b0ffeb5  data/data/com.termux/files/usr/share/aclocal/libassuan.m4

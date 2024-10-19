@@ -1,0 +1,255 @@
+.TH SSH-AGENT 1 "August 10 2023 " ""
+.SH NAME
+\fBssh-agent\fP
+\- OpenSSH authentication agent
+.SH SYNOPSIS
+.br
+\fBssh-agent\fP
+[\fB\-c\fP | s]
+[\fB\-\&Dd\fP]
+[\fB\-a\fP \fIbind_address\fP]
+[\fB\-E\fP \fIfingerprint_hash\fP]
+[\fB\-O\fP \fIoption\fP]
+[\fB\-P\fP \fIallowed_providers\fP]
+[\fB\-t\fP \fIlife\fP]
+.br
+\fBssh-agent\fP
+[\fB\-a\fP \fIbind_address\fP]
+[\fB\-E\fP \fIfingerprint_hash\fP]
+[\fB\-O\fP \fIoption\fP]
+[\fB\-P\fP \fIallowed_providers\fP]
+[\fB\-t\fP \fIlife\fP]
+\fIcommand\fP [\fIarg\fP...]
+.br
+\fBssh-agent\fP
+[\fB\-c\fP | s]
+\fB\-k\fP
+.SH DESCRIPTION
+\fBssh-agent\fP
+is a program to hold private keys used for public key authentication.
+Through use of environment variables the agent can be located
+and automatically used for authentication when logging in to other
+machines using
+\fBssh\fP(1).
+
+The options are as follows:
+.TP
+\fB\-a\fP \fIbind_address\fP
+Bind the agent to the
+UNIX-domain
+socket
+\fIbind_address\fP.
+The default is
+\fI$TMPDIR/ssh-XXXXXXXXXX/agent.\*(Ltppid\*(Gt\fP.
+.TP
+\fB\-c\fP
+Generate C-shell commands on
+.BR stdout .
+This is the default if
+.IR SHELL
+looks like it's a csh style of shell.
+.TP
+\fB\-D\fP
+Foreground mode.
+When this option is specified,
+\fBssh-agent\fP
+will not fork.
+.TP
+\fB\-d\fP
+Debug mode.
+When this option is specified,
+\fBssh-agent\fP
+will not fork and will write debug information to standard error.
+.TP
+\fB\-E\fP \fIfingerprint_hash\fP
+Specifies the hash algorithm used when displaying key fingerprints.
+Valid options are:
+``md5''
+and
+``sha256''.
+The default is
+``sha256''.
+.TP
+\fB\-k\fP
+Kill the current agent (given by the
+.IR SSH_AGENT_PID
+environment variable).
+.TP
+\fB\-O\fP \fIoption\fP
+Specify an option when starting
+\fB.\fP
+Currently two options are supported:
+\fBallow-remote-pkcs11\fP
+and
+\fBno-restrict-websafe\fP.
+
+The
+\fBallow-remote-pkcs11\fP
+option allows clients of a forwarded
+\fBssh-agent\fP
+to load PKCS#11 or FIDO provider libraries.
+By default only local clients may perform this operation.
+Note that signalling that an
+\fBssh-agent\fP
+client is remote is performed by
+\fBssh\fP(1),
+and use of other tools to forward access to the agent socket may circumvent
+this restriction.
+
+The
+\fBno-restrict-websafe\fP
+option instructs
+\fBssh-agent\fP
+to permit signatures using FIDO keys that might be web authentication
+requests.
+By default,
+\fBssh-agent\fP
+refuses signature requests for FIDO keys where the key application string
+does not start with
+``ssh:''
+and when the data to be signed does not appear to be a
+\fBssh\fP(1)
+user authentication request or a
+\fBssh-keygen\fP(1)
+signature.
+The default behaviour prevents forwarded access to a FIDO key from also
+implicitly forwarding the ability to authenticate to websites.
+.TP
+\fB\-P\fP \fIallowed_providers\fP
+Specify a pattern-list of acceptable paths for PKCS#11 provider and FIDO
+authenticator middleware shared libraries that may be used with the
+\fB\-S\fP
+or
+\fB\-s\fP
+options to
+\fBssh-add\fP(1).
+Libraries that do not match the pattern list will be refused.
+See PATTERNS in
+\fBssh_config\fP(5)
+for a description of pattern-list syntax.
+The default list is
+``usr/lib*/*,/usr/local/lib*/*''.
+.TP
+\fB\-s\fP
+Generate Bourne shell commands on
+.BR stdout .
+This is the default if
+.IR SHELL
+does not look like it's a csh style of shell.
+.TP
+\fB\-t\fP \fIlife\fP
+Set a default value for the maximum lifetime of identities added to the agent.
+The lifetime may be specified in seconds or in a time format specified in
+\fBsshd_config\fP(5).
+A lifetime specified for an identity with
+\fBssh-add\fP(1)
+overrides this value.
+Without this option the default maximum lifetime is forever.
+.TP
+\fIcommand\fP [\fIarg\fP...]
+If a command (and optional arguments) is given,
+this is executed as a subprocess of the agent.
+The agent exits automatically when the command given on the command
+line terminates.
+.PP
+
+There are two main ways to get an agent set up.
+The first is at the start of an X session,
+where all other windows or programs are started as children of the
+\fBssh-agent\fP
+program.
+The agent starts a command under which its environment
+variables are exported, for example
+\fBssh-agent\fP xterm & .
+When the command terminates, so does the agent.
+
+The second method is used for a login session.
+When
+\fBssh-agent\fP
+is started,
+it prints the shell commands required to set its environment variables,
+which in turn can be evaluated in the calling shell, for example
+\fBeval\fP `ssh-agent -s` .
+
+In both cases,
+\fBssh\fP(1)
+looks at these environment variables
+and uses them to establish a connection to the agent.
+
+The agent initially does not have any private keys.
+Keys are added using
+\fBssh-add\fP(1)
+or by
+\fBssh\fP(1)
+when
+\fBAddKeysToAgent\fP
+is set in
+\fBssh_config\fP(5).
+Multiple identities may be stored in
+\fBssh-agent\fP
+concurrently and
+\fBssh\fP(1)
+will automatically use them if present.
+\fBssh-add\fP(1)
+is also used to remove keys from
+\fBssh-agent\fP
+and to query the keys that are held in one.
+
+Connections to
+\fBssh-agent\fP
+may be forwarded from further remote hosts using the
+\fB\-A\fP
+option to
+\fBssh\fP(1)
+(but see the caveats documented therein),
+avoiding the need for authentication data to be stored on other machines.
+Authentication passphrases and private keys never go over the network:
+the connection to the agent is forwarded over SSH remote connections
+and the result is returned to the requester,
+allowing the user access to their identities anywhere in the network
+in a secure fashion.
+.SH ENVIRONMENT
+.TP
+.B SSH_AGENT_PID
+When
+\fBssh-agent\fP
+starts, it stores the name of the agent's process ID (PID) in this variable.
+.TP
+.B SSH_AUTH_SOCK
+When
+\fBssh-agent\fP
+starts, it creates a
+UNIX-domain
+socket and stores its pathname in this variable.
+It is accessible only to the current user,
+but is easily abused by root or another instance of the same user.
+.PP
+.SH FILES
+.TP
+.B $TMPDIR/ssh-XXXXXXXXXX/agent.<ppid>
+UNIX-domain
+sockets used to contain the connection to the authentication agent.
+These sockets should only be readable by the owner.
+The sockets should get automatically removed when the agent exits.
+.PP
+.SH SEE ALSO
+\fBssh\fP(1),
+\fBssh-add\fP(1),
+\fBssh-keygen\fP(1),
+\fBssh_config\fP(5),
+\fBsshd\fP(8)
+.SH AUTHORS
+
+-nosplit
+OpenSSH is a derivative of the original and free ssh 1.2.12 release by
+
+Tatu Ylonen .
+
+Aaron Campbell , Bob Beck , Markus Friedl , Niels Provos , Theo de Raadt
+and
+
+Dug Song
+removed many bugs, re-added newer features and created OpenSSH.
+
+Markus Friedl
+contributed the support for SSH protocol versions 1.5 and 2.0.
