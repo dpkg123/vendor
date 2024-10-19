@@ -1,0 +1,11 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=/data/data/com.termux/files/usr/lib
+includedir=${prefix}/include
+
+Name: libnewt
+Description: A development library for text mode user interfaces
+Version: 0.52.24
+Requires.private: slang
+Libs: -L${libdir} -lnewt
+Cflags: -I${includedir}
